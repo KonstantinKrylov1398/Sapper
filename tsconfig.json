@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "allowJs": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "lib": ["DOM", "ESNext"],
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "resolveJsonModule": true
+  }
+}
