@@ -7,7 +7,7 @@ import { createField } from "./utils/CreateField";
 export function App() {
   const Mine = -1;
   const smail: any = useRef();
-  const size = 16;
+  const size = 2;
   const dimension = new Array(size).fill(null);
   const [die, setDie] = useState(false);
   const [field, setField] = useState<any>(() => createField(size, Mine));
@@ -29,6 +29,7 @@ export function App() {
     setCounter(40);
     setMask((prev) => [...prev]);
     setTimer(0);
+    setDie(false);
   };
   const formatTime = () => {
     const minutes = Math.floor(timer / 60);
@@ -57,7 +58,12 @@ export function App() {
         }}
       >
         <div>{counter}</div>
-        <div ref={smail} onClick={() => restartGame()}>
+        <div
+          ref={smail}
+          onClick={() => {
+            restartGame();
+          }}
+        >
           {"😊"}
         </div>
         <div>{formatTime()}</div>
