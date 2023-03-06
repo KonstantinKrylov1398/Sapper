@@ -1,4 +1,4 @@
-export function createField(size: number, Mine: -1) {
+export function createField(size: number, Mine: number) {
   const array = new Array(size * size).fill(0);
   function inc(x: number, y: number) {
     if (x >= 0 && x < size && y >= 0 && y < size) {
